@@ -30,8 +30,8 @@ What's New
 
 - Workshop updated for the following software versions:
 
-    - Prism Central 5.11
-    - AOS 5.11
+    - AOS 5.11.2.3
+    - Prism Central 5.11.2.1
 
 Initial Setup
 +++++++++++++
@@ -54,6 +54,7 @@ Hosted POC clusters follow a standard naming convention:
 - **Cluster IP** - 10.**21**.\ *XYZ*\ .37
 
 If provisioned from the marketing pool:
+
 - **Cluster Name** - MKT\ *XYZ*
 - **Subnet** - 10.**20**.\ *XYZ*\ .0
 - **Cluster IP** - 10.**20**.\ *XYZ*\ .37
@@ -143,11 +144,17 @@ Each cluster has a dedicated domain controller VM, **DC**, responsible for provi
    * - SSP Developers
      - devuser01-devuser25
      - nutanix/4u
-   * - SSP Power Users
-     - poweruser01-poweruser25
+   * - SSP Consumers
+     - consumer01-consumer25
      - nutanix/4u
-   * - SSP Basic Users
-     - basicuser01-basicuser25
+   * - SSP Operators
+     - operator01-operator25
+     - nutanix/4u
+   * - SSP Custom
+     - custom01-custom25
+     - nutanix/4u
+   * - Bootcamp Users
+     - user01-user25
      - nutanix/4u
 
 Access Instructions
@@ -155,20 +162,46 @@ Access Instructions
 
 The Nutanix Hosted POC environment can be accessed a number of different ways:
 
+Lab Access User Credentials
+...........................
+
+PHX Based Clusters:
+**Username:** PHX-POCxxx-User01 (up to PHX-POCxxx-User20), **Password:** *<Provided by Instructor>*
+
+RTP Based Clusters:
+**Username:** RTP-POCxxx-User01 (up to RTP-POCxxx-User20), **Password:** *<Provided by Instructor>*
+
+Frame VDI
+.........
+
+Login to: https://frame.nutanix.com/x/labs
+
+**Nutanix Employees** - Use your **NUTANIXDC** credentials
+**Non-Employees** - Use **Lab Access User** Credentials
+
 Parallels VDI
 .................
 
-Login to: https://xld-uswest1.nutanix.com (for PHX) or https://xld-useast1.nutanix.com (for RTP)
+PHX Based Clusters Login to: https://xld-uswest1.nutanix.com
 
-**Nutanix Employees** - Use your NUTANIXDC credentials
-**Non-Employees** - **Username:** POCxxx-User01 (up to POCxxx-User20), **Password:** *<Provided by Instructor>*
+RTP Based Clusters Login to: https://xld-useast1.nutanix.com
 
-Pulse Secure VPN
+**Nutanix Employees** - Use your **NUTANIXDC** credentials
+**Non-Employees** - Use **Lab Access User** Credentials
+
+Employee Pulse Secure VPN
 ..........................
 
-To download the client: login to https://xlv-uswest1.nutanix.com or https://xlv-useast1.nutanix.com - **Username:** POCxxx-User01 (up to POCxxx-User20), **Password:** *<Provided by Instructor>*
+Download the client:
 
-Download and install the client.
+PHX Based Clusters Login to: https://xld-uswest1.nutanix.com
+
+RTP Based Clusters Login to: https://xld-useast1.nutanix.com
+
+**Nutanix Employees** - Use your **NUTANIXDC** credentials
+**Non-Employees** - Use **Lab Access User** Credentials
+
+Install the client.
 
 In Pulse Secure Client, **Add** a connection:
 
@@ -188,6 +221,6 @@ For RTP:
 Nutanix Version Info
 ++++++++++++++++++++
 
-- **AHV Version** - AHV 20170830.301 (5.11+)
-- **AOS Version** - 5.11
-- **PC Version** - 5.11
+- **AHV Version** - AHV 20170830.337
+- **AOS Version** - 5.11.2.3
+- **PC Version** - 5.11.2.1
